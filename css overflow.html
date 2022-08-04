@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<title>CSS Overflow
+</title>
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.main {
+  padding-top: 20px;
+  margin-left: 200px;
+    line-height: 25px;
+}
+</style>
+</head>
+<body>
+
+  <style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+
+      <a href="index.html" class="btn btn-info btn-lg">
+          <span class="glyphicon glyphicon-home"></span> Home
+        </a>
+ <a href="css introduction.html">CSS Introduction</a>
+ <button class="dropdown-btn">Structure and Formatting of a CSS Rule
+
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="css property lists.html">CSS Property Lists</a>
+    <a href="css multiple selectors.html"> CSS Multiple Selectors</a>
+   
+  </div>
+  <a href="css comments.html"> CSS Comments</a>
+  <a href="css background color.html">CSS Background Color</a>
+  <a href="css background image.html">CSS Background Image</a>
+
+ <a href="css multiple background image.html">CSS Multiple Background Image</a>
+ <a href="css text-align.html">CSS Text-align</a>
+ <a href="css horizontal and vertical centering using table layout .html">CSS Horizontal and Vertical centering using table layout</a>
+ <a href="css padding on a given side.html"> CSS Padding on a given side</a>
+ <a href="css border-collapse.html">CSS Border-collapse</a>
+ <a href="css  outline-style.html">  CSS  Outline-style</a>
+ <a href="css float an image within text.html">CSS Float an Image Within Text</a>
+   <button class="dropdown-btn"> CSS Overflow
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="css overflow-wrap.html">CSS Overflow-wrap</a>
+    <a href="css overflow-x and overflow-y.html"> CSS Overflow-X and Overflow-Y</a>
+    <a href="overflow scroll.html">CSS Overflow Scroll</a>
+   
+  </div>
+ <a href="css block formatting context created with overflow.html">CSS Block Formatting Context Created with Overflow </a>
+
+     <a href="css in-line DIV using float.html">CSS In-line DIV using float</a> 
+  
+</div>
+
+<div class="main">
+  
+</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+</div>
+
+<div class="main">
+<h1 style="color:blue;">CSS Outline-style</h1>
+<p><h3>The outline-style property is used to set the style of the outline of an element.
+</h3></p>
+
+
+    <div class="editor">
+     
+     
+         <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Try it yourself editor</title>
+    <style type="text/css">
+      textarea, iframe {
+          border: 2px solid black;
+          height: 300px;
+          width: 100%;   
+        
+      }
+      </style>
+  </head>
+   
+        <table width="100%" border="0" cellspacing="5" cellpadding="5">
+            <tr>
+                <td width="50%" scope="col">&nbsp;</td>
+                <td width="50%" align="left" scope="col">
+                    <input onclick="runCode();" type="button" value="Run Code">
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <form>
+                        <strong>Code</strong>
+                        <textarea name="sourceCode" id="sourceCode">
+<html>
+<head>
+<title>CSS Outline-style</title>
+</head>
+<body> 
+  <p class="p1">A dotted outline</p>
+<p class="p2">A dashed outline</p>
+<p class="p3">A solid outline</p>
+<p class="p4">A double outline</p>
+<p class="p5">A groove outline</p>
+<p class="p6">A ridge outline</p>
+<p class="p7">An inset outline</p>
+<p class="p8">An outset outline</p>
+</body>
+  <style>
+p {
+ border: 1px solid black;
+ outline-color:blue;
+ line-height:30px;
+}
+.p1{
+ outline-style: dotted;
+}
+.p2{
+ outline-style: dashed;
+}
+.p3{
+ outline-style: solid;
+}
+.p4{
+ outline-style: double;
+}
+.p5{
+ outline-style: groove;
+}
+.p6{
+ outline-style: ridge;
+}
+.p7{
+ outline-style: inset;
+}
+.p8{
+ outline-style: outset;
+}
+</style>
+</html>
+                        </textarea>
+                    </form>
+                </td>
+                <td><strong>Output</strong><iframe name="targetCode" id="targetCode"></iframe></td>
+            </tr>
+        </table>  
+        <script type="text/javascript">
+            function runCode()
+            {
+                var content = document.getElementById('sourceCode').value;
+                var iframe = document.getElementById('targetCode');
+                iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+                iframe.document.open();
+                iframe.document.write(content);
+                iframe.document.close();
+                return false;
+            }
+            runCode();
+        </script>
+    </div>
+  </div>
+
+     
+     
+      
+
+</body>
+</html> 

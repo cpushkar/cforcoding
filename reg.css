@@ -1,0 +1,35 @@
+
+body {background-color: gray;
+    }
+
+
+.big {
+ background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  padding: 10px 0px 80px 50px;
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+ }
+hr {
+  border: 1px solid #f1f1;
+  margin-bottom: 30px;
+}
+.cancelbtn {
+	padding: 20px 80px;
+	background-color:  #f44336;
+	}
+.button {
+	padding: 20px 80px;
+	background-color: lightgreen;
+	
+}
+/* Full-width input fields */
+input[type=text], input[type=password],input[type=date],input[type=phone] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+

@@ -1,0 +1,145 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>contact us</title>
+<html>
+<head>
+<body bgcolor="cornsilk" >
+<h1 style="margin:0;padding:0; font-size: 50px;"><img src="logo.jpeg" alt="some_text" width="500px" height="500px"><style="text: 500px;><i><b>CforCoding<font color ="green"></font></b></i></h1>
+
+<p align="right" ><i>Search as <b> CforCoding.com</b></i></p>
+<div class = "nav">
+<ul>
+<li><a href ="index.html">Home</a></li>
+</ul>
+</div>
+
+</head>
+<body>
+<style>
+.nav{
+width:100%;
+background:#000033;
+height:80px;
+padding:0.1px;
+}
+ul{
+list-style:none;
+padding:0;
+margin:0;
+position:absolute;
+}
+ul li{
+float:left;
+margin-top:20px;
+}
+ul li a{
+width:150px;
+color:white;
+display:block;
+text-decoration:none;
+font-size:20px;
+text-align:center;
+padding:10px;
+border-radius:10px;
+font-family:century Gothic;
+font-weight:bold;
+}
+a:hover{
+background:#669900;
+}
+ul li ul{
+background:#000033;
+}
+ul li ul li{
+float:none;
+}
+ul li ul{
+display:none;
+}
+ul li:hover ul{
+display:block;
+}
+*{
+margin:0;
+padding:5;
+box-sizing:border-box;
+outline:50px;
+
+}
+body{
+background:cornsilk;
+}
+body h2{
+font-family:times new roman;
+text-transform:uppercase;
+}
+.form{
+position:absolute;
+top:32%;
+left:50%;
+border-radius:5px;
+padding:35px;
+
+}
+.form h2{
+text-align:center;
+margin-bottom:10px;
+text-transform:uppercase;
+letter-spacing:3px;
+color:green;
+}
+.form.input_field input[type="text"],
+.form textarea{
+width:200px;
+border:1px solid green;
+padding:10px;
+}
+.form textarea{
+height:80px;
+}
+.form #error_message{
+background:cornsilk;
+padding:10px;
+text-align:center;
+color:red;
+font-size:20px;
+}
+.footer{
+position:fixed;
+left:0;
+bottom:0;
+width:100%;
+background-color:#000033;
+color:white;
+text-align:center;
+}
+
+</style>
+<marquee behavior="scroll" direction="left"><h2>give effective feedback</h2></marquee>
+<div class="form">
+
+<form id="myform" method="POST" action ="contact-handler.php">
+<div class="input_field">
+<input type="text" placeholder="name" id="name">
+</div>
+
+<div class="input_field">
+<input type="Email" placeholder="Email" id="Email">
+</div>
+<div class="input_field">
+<textarea id="message" placeholder="mesage"></textarea>
+</div>
+<div class="btn">
+<input type="submit">
+</div>
+
+</form>
+
+</div>
+<div class="footer">
+<p> CforCoding is informative, learning and useable website. Copyright 2020 by Refsnes Data. All Rights Reserved.</p>
+</div>
+
+</body>
+</html>

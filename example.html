@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
+    <!-- <title>Responsive Navigation Menu</title> -->
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+CforCoding</div>
+<input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+<li><a class="active" href="index.html">Home</a></li>
+<li><a href="introduction.html">HTML</a></li>
+<li><a href="javascript.html">JAVASCRIPT</a></li>
+<li> <a href="css introduction.html">CSS</a></li>
+<li><a href="try.html">Code Editor</a></li>
+<li><a href="feedback form.html">Feedback</a></li>
+</ul>
+</nav>
+    <div class="content">
+      <div><h2>Python Programing Examples</h2></div>
+        The following Python section contains a wide collection of Python programming examples. The examples are categorized based on the various topics.<br> Each program example contains multiple approaches to solve the problem.
+   </div>
+
+   <div class="sub-content">
+  
+    <ul>
+     
+
+      <h3>Basic Programs</h3>
+      <li><a href="C:\xampp\htdocs\sdp\Python Programs to add to numbers.html">Python Programs to add to numbers</a></li>
+      <li>Maximum of two numbers in Python</li>
+      <li>Python Program of factorial of a number</li>
+      <li>Python Program for simple interest</li>
+      <li>Python Program for compound intrest</li>
+      <li>Python Program to check amstrong number</li>
+      <li>Python Program for program to find area of circle</li>
+      <li>Python Program to print all prime numbers in an interval</li>
+      <li>Python Program to check whether a number is prime or not</li>
+      <li>Python Programs for n-th Fibonacci number</li>
+      <li>Python Program for how to check if a given number is Fibonacci Number?</li>
+      <li>Python Program to print ASCII Value of a character</li>
+      <li>Python Program for sum of sqiares of first n natural numbers </li>
+  
+        <h3>Array Programs</h3>
+      <li>Python Program to find sum of array</li>
+      <li>Python Program to find largest element in an array</li>
+      <li>Python Program for array rotation</li>
+      <li>Python Program for Reversal algorithm for array rotation</li>
+      <li>Python Program to Split the array and add the first part to the end</li>
+      <li>Python Program for Find reminder of array multiplication divided by n</li>
+      <li>Python Program to check if given array is Monotonic</li>
+
+   
+
+  </ul>
+</div>
+
+
+<div class="one-content">
+  <ul>
+     <h3>List Programs</h3>
+     <li>Python program to interchange first and last elements in a list</li>
+<li>Python program to swap two elements in a list</li>
+<li>Python Ways to find length of list</li>
+<li>Python Ways to check if element exists in list</li>
+<li>Different ways to clear a list in Python</li>
+<li>Python Reversing a List</li>
+<li>Python program to find sum of elements in list</li>
+<li>Python Multiply all numbers in the list</li>
+<li>Python program to find smallest number in a list</li>
+<li>Python program to find largest number in a list</li>
+<li>Python program to find second largest number in a list</li>
+<li>Python program to find N largest elements from a list</li>
+<li>Python program to print even numbers in a list</li>
+<li>Python program to print odd numbers in a List</li>
+<li>Python program to print all even numbers in a range</li>
+<li>Python program to print all odd numbers in a range</li>
+<li>Python program to print positive numbers in a list</li>
+<li>Python program to print negative numbers in a list</li>
+<li>Python program to print all positive numbers in a range</li>
+<li>Python program to print all negative numbers in a range</li>
+<li>Remove multiple elements from a list in Python</li>
+<li>Python Remove empty List from List</li>
+<li>Python Cloning or Copying a list</li>
+<li>Python Count occurrences of an element in a list</li>
+<li>Python Remove empty tuples from a list</li>
+<li>Python Program to print duplicates from a list of integers</li>
+<li>Python program to find Cumulative sum of a list</li>
+<li>Python Sum of number digits in List</li>
+<li>Break a list into chunks of size N in Python</li>
+<li>Python Sort the values of first list using second list</li>
+</ul>
+
+
+
+
+
+
+
+
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+.content{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: all;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+.sub-content {
+ position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: all;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b; 
+}
+.one-content {
+ position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: all;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b; 
+}
+ul {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+</style>
+</body>
+</html>

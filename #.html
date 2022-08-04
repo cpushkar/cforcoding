@@ -1,0 +1,253 @@
+   <?php
+      if(isset($_POST['register']))
+      {
+        @$username=$_POST['username'];
+        @$password=$_POST['password'];
+        @$cpassword=$_POST['cpassword'];
+        
+        if($password==$cpassword)
+        {
+          $query = "select * from userinfotbl where username='$username'";
+          //echo $query;
+        $query_run = mysqli_query($con,$query);
+        //echo mysql_num_rows($query_run);
+        if($query_run)
+          {
+            if(mysqli_num_rows($query_run)>0)
+            {
+              echo '<script type="text/javascript">alert("This Username Already exists.. Please try another username!")</script>';
+            }
+            else
+            {
+              $query = "insert into userinfotbl values('$username','$password')";
+              $query_run = mysqli_query($con,$query);
+              if($query_run)
+              {
+                echo '<script type="text/javascript">alert("User Registered.. Welcome")</script>';
+                $_SESSION['username'] = $username;
+                $_SESSION['password'] = $password;
+                header( "Location: homepage.php");
+              }
+              else
+              {
+                echo '<p class="bg-danger msg-block">Registration Unsuccessful due to server error. Please try later</p>';
+              }
+            }
+          }
+          else
+          {
+            echo '<script type="text/javascript">alert("DB error")</script>';
+          }
+        }
+        else
+        {
+          echo '<script type="text/javascript">alert("Password and Confirm Password do not match")</script>';
+        }
+        
+      }
+      else
+      {
+      }
+    ?>
+
+
+
+
+    login 
+
+
+
+    <?php
+      if(isset($_POST['login']))
+      {
+        @$username=$_POST['username'];
+        @$password=$_POST['password'];
+        $query = "select * from userinfotbl where username='$username' and password='$password' ";
+        //echo $query;
+        $query_run = mysqli_query($con,$query);
+        //echo mysql_num_rows($query_run);
+        if($query_run)
+        {
+          if(mysqli_num_rows($query_run)>0)
+          {
+          $row = mysqli_fetch_array($query_run,MYSQLI_ASSOC);
+          
+          $_SESSION['username'] = $username;
+          $_SESSION['password'] = $password;
+          
+          header( "Location: homepage.php");
+          }
+          else
+          {
+            echo '<script type="text/javascript">alert("No such User exists. Invalid Credentials")</script>';
+          }
+        }
+        else
+        {
+          echo '<script type="text/javascript">alert("Database Error")</script>';
+        }
+      }
+      else
+      {
+      }
+    ?> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="content">
+               
+         <ul>
+
+            <li class="active"><a href="html.html">HTML</a> 
+              
+               <div class="sub-content1">
+                  <ul>
+            <li><a href=" introduction.html">HTML Introduction</li>
+            <li><a href="creating a simple page.html">HTML Creating a simple page</li>
+            <li><a href="doctypes.html">HTML  Doctypes</li>                                            
+            <li><a href="heading.html">HTML  Heading</li>
+            <li><a href="para.html">HTML Paragraphs</li>
+            <li>For further tutorials <a href="introduction.html">HTML</a> 
+           
+               </ul>
+           </div>
+       </li>
+ 
+
+            <li><a href="css.html">CSS</a>
+              <div class="sub-content1">
+                <ul>
+            <li><a href="css introduction.html">CSS Introduction</li>
+            <li><a href="css how to.html">CSS How To</li>
+            <li><a href="css comments.html">CSS Comments</li>                                            
+            <li><a href="css colors.html">CSS Color</li>
+            <li><a href="css background.html">CSS Background</li>
+            <li>For further tutorials <a href="css.html">CSS</a>
+
+               </ul>
+           </div>
+       </li>
+
+            <li><a href="javascript.html">JAVASCRIPT</a>
+              <div class="sub-content1">
+                <ul>
+             <li><a href="jssyntax.html">JS Syntax</li>
+            <li><a href="js comments.html">JS Comments</li>
+            <li><a href="js Variables.html">JS Variables</li>
+            <li><a href="js operators.html">JS Operators</li>
+            <li><a href="js arthimatic.html">JS Arthimatic</li>
+            <li>For further tutorials <a href="javascript.html">JAVASCRIPT</a>
+        </ul>
+    </div>
+     </li>
+
+
+           
+                             </ul>
+                                   </div>
+                                       </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        <li> <a href="Regestration Form.html"class="">
+          <span class="glyphicon glyphicon-user"></span> Sign Up
+        </a>
+      </li>
+          
+      <li> 
+        <a href = "login.html"class="">
+          <span class="glyphicon glyphicon-log-in"></span> Sign in
+        </a>
+    </li>
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <script>
+
+function F1(){
+var name = document.getElementById("name").value;
+var subject = document.getElementById("subject").value;
+var phone = document.getElementById("phone").value;
+var email = document.getElementById("email").value;
+var message = document.getElementById("message").value;
+var error_message = document.getElementById("error_message");
+var text;
+
+ error_message.style.padding="10px";
+ if(name.length<5){
+    
+ text= " pls enter valid name";
+ error_message.innerHTML= text;
+ return false;
+      
+}
+if(subject.length<10)
+{
+text= " pls enter valid subject";
+error_message.innerHTML= text;
+return false;
+   }
+    if(isNaN(phone)|| phone.length != 10)
+{text= " pls enter valid phone number";
+  error_message.innerHTML= text;
+  return false;}
+ if(email.indexof("@") == -1 || email.length<6 )
+{text= " pls enter valid email";
+ error_message.innerHTML= text;
+ return false;}
+    if(message.length<= 10)
+{text= " pls enter more than 50 word";
+  error_message.innerHTML= text;
+  return false;}
+    alert("sent");
+    return true;
+}
+</script>

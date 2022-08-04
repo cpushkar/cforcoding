@@ -1,0 +1,273 @@
+<?php
+  session_start();
+  require_once('dbconfig/config.php');
+  //phpinfo();
+?>
+
+
+<html>
+  <head>
+
+  	  
+     <title>Home Page </title>
+     <link rel="stylesheet" type="text/css" href="home.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+
+     	
+     	<nav class="navbar navbar-top">
+     		<div class="navbar-header">
+     			<button type="button" class="navbar-toggle"data toggle="collapse" data-target="#myNavbar">
+     				<span class="icon-bar"></span>
+     				<span class="icon-bar"></span>
+     				<span class="icon-bar"></span>
+     		</button> </div>
+              <div id="header">
+              <a href="#" class="logo">
+              	 <img src="logo.jpeg" height="100" width="90">              </a></div>
+
+      
+    
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+        	
+         
+
+        	 <li> <a href="Regestration Form.html"class="">
+          <span class="glyphicon glyphicon-user"></span> Sign Up
+        </a>
+      </li>
+          
+      <li> 
+        <a href = "http://localhost/login/login.html"class="">
+          <span class="glyphicon glyphicon-log-in"></span> Sign in
+        </a>
+    </li>
+
+
+</ul>
+      </div>  
+        
+        	<div class="content">
+        		   
+         <ul>
+
+            <li class="active"><a href="html.html">HTML</a> 
+            	
+               <div class="sub-content1">
+                	<ul>
+            <li><a href=" introduction.html">HTML Introduction</li>
+            <li><a href="creating a simple page.html">HTML Creating a simple page</li>
+            <li><a href="doctypes.html">HTML  Doctypes</li>                                            
+            <li><a href="heading.html">HTML  Heading</li>
+            <li><a href="para.html">HTML Paragraphs</li>
+            <li>For further tutorials <a href="introduction.html">HTML</a> 
+           
+               </ul>
+           </div>
+       </li>
+ 
+
+            <li><a href="css.html">CSS</a>
+            	<div class="sub-content1">
+            		<ul>
+            <li><a href="css introduction.html">CSS Introduction</li>
+            <li><a href="css  outline-style.html">  CSS Outline-style</li>
+            <li>  <a href="overflow scroll.html">CSS Overflow Scroll</li>                                            
+            <li>  <a href="css multiple selectors.html"> CSS Multiple Selectors</li>
+            <li> <a href="css property lists.html">CSS Property Lists</li>
+            <li>For further tutorials <a href="css introduction.html">CSS</a>
+
+               </ul>
+           </div>
+       </li>
+
+            <li><a href="javascript.html">JAVASCRIPT</a>
+              <div class="sub-content1">
+              	<ul>
+             <li> <a href="js logic operators with booleans.html">JS Logic Operators with Booleans</li>
+            <li><a href="js comments.html">JS Comments</li>
+            <li><a href="js Variables.html">JS Variables</li>
+            <li> <a href="js data types.html">JS Data Types</li>
+            <li> <a href="js intervals.html">JS Intervals</li>
+            <li>For further tutorials  <a href="javascript.html">JAVASCRIPT</a>
+        </ul>
+    </div>
+     </li>
+
+
+         
+                             
+                                   </div>
+                                       </nav>
+             <body>
+
+
+
+
+    
+      <img src="home img.jpg" alt=" ">
+
+         <div class="button">
+              <h1><button class="button"><a href="example.html">For Examples</button></h1></a>
+            </div>
+
+     
+
+  
+
+    <div class="editor">
+      <h2>For testing your code:-</h2>
+     
+         <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Try it yourself editor</title>
+    <style type="text/css">
+      textarea, iframe {
+          border: 2px solid black;
+          height: 700px;
+          width: 100%;    
+      }
+      </style>
+  </head>
+   
+        <table width="100%" border="0" cellspacing="5" cellpadding="5">
+            <tr>
+                <td width="50%" scope="col">&nbsp;</td>
+                <td width="50%" align="left" scope="col">
+                    <input onclick="runCode();" type="button" value="Run Code">
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <form>
+                        <strong>Code</strong>
+                        <textarea name="sourceCode" id="sourceCode">
+<html>
+<head>
+<title>Hello</title>
+</head>
+<body>
+<h1>Hello!</h1>
+<p>Write HTML, CSS or JavaScript code here and click 'Run Code'.</p>
+</body>
+</html>
+                        </textarea>
+                    </form>
+                </td>
+                <td><strong>Output</strong><iframe name="targetCode" id="targetCode"></iframe></td>
+            </tr>
+        </table>  
+        <script type="text/javascript">
+            function runCode()
+            {
+                var content = document.getElementById('sourceCode').value;
+                var iframe = document.getElementById('targetCode');
+                iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+                iframe.document.open();
+                iframe.document.write(content);
+                iframe.document.close();
+                return false;
+            }
+            runCode();
+        </script>
+    </div>
+   
+  
+       
+         
+       
+
+            <div class="footer">
+
+              <div class="footer-content">
+
+               <div class="footer-section about">
+                 <h1 class="logo-text"><span>CforCoding</span></h1>
+                 <p> It is a informative </p>
+
+
+                 <div class="contact">
+                  <span><i  class="glyphicon glyphicon-earphone"></i> &nbsp; 123-456-789</span>
+                  <span><i class="glyphicon glyphicon-envelope"></i> &nbsp; info@cforcoding.com</span>
+                </div>
+
+                <div class="socials">
+                  <a href="facebook"><i class="fa fa-facebook"></i></a>
+                  <a href="instagram"><i class="fa fa-instagram"></i></a>
+                
+                </div>
+                 </div>
+
+
+             
+              <div class="footer-section links">
+                 <h2>Quick Links</h2>
+                 <br>
+                 <ul>
+                  <a href="Home Page.html">
+                    <li>HTML</li>
+                  </a>
+
+                   <a href="javascript.html">
+                    <li>Java Script</li>
+                  </a>
+
+                   <a href="#">
+                    <li>CSS</li>
+                  </a>
+
+                   
+
+                   <a href="example.html">
+                    <li>Examples</li>
+                  </a>
+              
+                
+             
+                <a href="terms and conditions.html">
+                    <li>Terms & Conditions</li>
+                  </a>
+
+                    <a href="http://localhost/info/feedback%20form.html">
+                    <li>Feedback Form</li>
+                  </a>
+                </ul>
+
+              </div>
+
+             <div class="footer-section contact-form">
+               <h2>Contact Us</h2>
+                  <br>
+                  <form action="index.html" method="post">
+                    <input type="email" required="" name="email" class="text-input contact-input" placeholder="Your email address.... require">
+                    <br><br>
+                    <input type="message" required="" name="message" class="text-input contact-input" placeholder="Your message....">
+                    <br><br>
+                    <button type="submit" class="btn btn-big">
+                      <i class="glyphicon glyphicon-envelope"></i>
+                      <form action="mailto:cpushkar9601@gmail.com" method="post" enctype="text/plain">
+                    
+                    </form>
+                    </button>
+                  </form>
+             </div>
+       </div>
+         
+
+             <div class="footer-bottom">
+               &copy; cforCoding.com | Designed by CforCoding Group
+             </div>
+
+       
+         </div>
+
+
+
+</body>
+</html>
